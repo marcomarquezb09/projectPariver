@@ -1,5 +1,4 @@
 export interface Pelicula {
-
     id: number;
     duracion: number;
     fechaSesion : string;

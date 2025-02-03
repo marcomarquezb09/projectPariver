@@ -45,9 +45,7 @@
           <ion-item>
             <ion-select placeholder="Cine">
               <div slot="label">Seleccione un cine</div>
-              <ion-select-option value="Cines Palafox">Cines Palafox</ion-select-option>
-              <ion-select-option value="Cine Aragonia">Cine Aragonia</ion-select-option>
-              <ion-select-option value="Cine Cervantes">Cine Cervantes</ion-select-option>
+              <ion-select-option *ngFor = "let cine of cines" value = "{{cine.id}}">{{cine.nombre}}</ion-select-option>
             </ion-select>
           </ion-item>
         </ion-list>

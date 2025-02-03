@@ -1,46 +1,33 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
- 
+  {
+    path: 'login',
+    loadComponent: () => import('./pages/layout/login/login.page').then( m => m.LoginPage)
+  },
+  {
+    path: 'logout',
+    loadComponent: () => import('./pages/layout/logout/logout.page').then( m => m.LogoutPage)
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./pages/layout/register/register.page').then( m => m.RegisterPage)
+  },
+  {
+    path: 'cine',
+    loadComponent: () => import('./pages/main/cine/cine.page').then( m => m.CinePage)
+  },
+  {
+    path: 'pelicula',
+    loadComponent: () => import('./pages/main/pelicula/pelicula.page').then( m => m.PeliculaPage)
+  },
+  {
+    path: 'ticket-item',
+    loadComponent: () => import('./pages/main/ticket/ticket-item/ticket-item.page').then( m => m.TicketItemPage)
+  },
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
-  },
-  {
-    path: 'login',
-    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
-  },
-  {
-    path: 'register',
-    loadComponent: () => import('./register/register.page').then( m => m.RegisterPage)
-  },
-  {
-    path: 'compra-tickets',
-    loadComponent: () => import('./compra-tickets/compra-tickets.page').then( m => m.CompraTicketsPage)
-  },
-  {
-    path: 'compra-tickets',
-    loadComponent: () => import('./compra-tickets/compra-tickets.page').then( m => m.CompraTicketsPage)
-  },
-  {
-    path: 'informacion-ticket',
-    loadComponent: () => import('./informacion-ticket/informacion-ticket.page').then( m => m.InformacionTicketPage)
-  },
-  {
-    path: 'inicio-sesion',
-    loadComponent: () => import('./inicio-sesion/inicio-sesion.page').then( m => m.InicioSesionPage)
-  },
-  {
-    path: 'logout',
-    loadComponent: () => import('./logout/logout.page').then( m => m.LogoutPage)
-  },
-  {
-    path: 'cine',
-    loadComponent: () => import('./cine/cine.page').then( m => m.CinePage)
-  },
-  {
-    path: 'pelicula',
-    loadComponent: () => import('./pelicula/pelicula.page').then( m => m.PeliculaPage)
-  },
+  }
 ];

@@ -5,9 +5,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Cine</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let cine of cines">
+      <ion-label>{{cine.nombre}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
