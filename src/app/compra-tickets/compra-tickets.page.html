@@ -1,0 +1,64 @@
+<ion-content>
+  <div class="div-ticket">
+    <ion-card class="card-ticket">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-text color="primary">
+              <h1 class="text-center">Compra de Tickets</h1>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-input label="Nombre" placeholder="Ingrese su nombre"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input label="Apellido" placeholder="Ingrese su apellido"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-input label="Película" placeholder="Ingrese su película"></ion-input>
+          </ion-col>
+          <ion-col>
+            <ion-input label="Género" placeholder="Ingrese el género"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+            <ion-modal [keepContentsMounted]="true">
+              <ng-template>
+                <ion-datetime id="datetime"></ion-datetime>
+              </ng-template>
+            </ion-modal>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-list>
+          <ion-item>
+            <ion-select placeholder="Cine">
+              <div slot="label">Seleccione un cine</div>
+              <ion-select-option value="Cines Palafox">Cines Palafox</ion-select-option>
+              <ion-select-option value="Cine Aragonia">Cine Aragonia</ion-select-option>
+              <ion-select-option value="Cine Cervantes">Cine Cervantes</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-row>
+          <ion-col>
+            <ion-button class="btn-comprar" >Comprar</ion-button>
+          </ion-col>
+        </ion-row>
+          
+      </ion-grid>
+    </ion-card>
+  </div>
+</ion-content>
