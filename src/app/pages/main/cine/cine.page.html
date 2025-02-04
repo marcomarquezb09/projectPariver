@@ -5,9 +5,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let cine of cines">
-      <ion-label>{{cine.nombre}}</ion-label>
-    </ion-item>
-  </ion-list>
+  <div class="main-div">
+    <ion-card class= "default-list-style">
+      <ion-list>
+        <ion-item *ngFor="let cine of cines">
+          <ion-label class="tamañoLetra">{{cine.nombre}} <ion-button class="btn-cine">Comprar ticket</ion-button></ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
 </ion-content>
