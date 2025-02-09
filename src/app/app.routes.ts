@@ -25,9 +25,16 @@ export const routes: Routes = [
     path: 'ticket-item',
     loadComponent: () => import('./pages/main/ticket/ticket-item/ticket-item.page').then( m => m.TicketItemPage)
   },
+
+  {
+    path: 'lista-tickets',
+    loadComponent: () => import('./pages/main/ticket/lista-tickets/lista-tickets.page').then( m => m.ListaTicketsPage)
+  },
+
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
-  }
+  },
+
 ];
