@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem, IonLabel } from '@ionic/angular/standalone';
 import { Cine } from '../../../shared/api/models/cine';
+import { StorageService } from 'src/app/shared/services/storage.service';
 
 @Component({
   selector: 'app-cine',
@@ -12,16 +13,12 @@ import { Cine } from '../../../shared/api/models/cine';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,FormsModule, CommonModule, IonList, IonItem, IonLabel]
 })
 export class CinePage implements OnInit {
+  cines : Cine[] = [];
 
-  public cines : Cine[] = [
-    {id: 1, nombre: "cine Palafox", capacidad: 1000, calle: "av. de Juan Pablo Segundo, 43"},
-    {id: 2, nombre: "cine Aragonia", capacidad: 1500, calle: "Av. de Juan Carlos I, 44"},
-    {id: 3, nombre: "cine Grancasa", capacidad: 1000, calle: "Centro comercial Gran Casa, 35"},
-  ]
+  constructor(private storageSv :StorageService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  async ngOnInit() {
+    let valorEnString: string = await this.storageSv.obtenerArray("cines");
+    this.cines = JSON.parse(valorEnString) ?? [];
   }
-
 }
