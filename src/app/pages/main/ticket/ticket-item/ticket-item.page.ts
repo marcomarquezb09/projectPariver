@@ -37,7 +37,7 @@ export class TicketItemPage {
   public comprarTicket(){
     //Recoger valores de campos del html
     let nameHtml: string = "aaa";
-    //Pruebas con console.log();
+    console.log(nameHtml);
 
     //Actualizar var de ticket
     this.ticket.nombre = nameHtml;

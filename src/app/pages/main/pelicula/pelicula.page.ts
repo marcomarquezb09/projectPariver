@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-import { Pelicula } from '../../../shared/api/models/pelicula';
+import { Pelicula } from '../../../shared/api/models/Pelicula';
 
 @Component({
   selector: 'app-pelicula',
