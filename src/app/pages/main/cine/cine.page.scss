@@ -1,10 +1,22 @@
-.tamañoLetra{
-    font-size:x-large;
+.tamañoLetra {
+    font-size: x-large;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    text-align: center;
 }
 
-.btn-cine{
-    font-size:smaller;
+.btn-cine {
+    font-size: smaller;
+    margin: 20px;
+    align-items:flex-end;
+    
 }
+
+// .cine-list-style {
+
+//     width: 80%;
+//     height: 40%;
+
+// }
+

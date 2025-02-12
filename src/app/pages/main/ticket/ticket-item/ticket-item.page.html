@@ -28,7 +28,7 @@
           </ion-col>
         </ion-row>
 
-        <ion-row>
+        <!-- <ion-row>
           <ion-col>
             <ion-datetime-button datetime="datetime"></ion-datetime-button>
 
@@ -38,21 +38,21 @@
               </ng-template>
             </ion-modal>
           </ion-col>
-        </ion-row>
+        </ion-row> -->
 
 
-        <ion-list>
+        <!-- <ion-list>
           <ion-item>
             <ion-select placeholder="Cine">
               <div slot="label">Seleccione un cine</div>
               <ion-select-option *ngFor = "let cine of cines" value = "{{cine.id}}">{{cine.nombre}}</ion-select-option>
             </ion-select>
           </ion-item>
-        </ion-list>
+        </ion-list> -->
 
         <ion-row>
           <ion-col>
-            <ion-button class="btn-comprar" (click)="comprarTicket()">Comprar</ion-button>
+            <ion-button [routerLink] = "['/cine']" class="btn-comprar" (click)="comprarTicket()">Comprar</ion-button>
           </ion-col>
         </ion-row>
           

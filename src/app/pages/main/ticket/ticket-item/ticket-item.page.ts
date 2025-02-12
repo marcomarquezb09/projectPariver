@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonText,  IonCol, IonGrid, IonRow, IonDatetime, IonInput, IonCard, IonModal, IonList, IonItem, IonSelect,IonSelectOption, IonDatetimeButton, IonButton} from '@ionic/angular/standalone';
 import { Ticket } from 'src/app/shared/api/models/ticket';
 import { Cine } from 'src/app/shared/api/models/cine';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-ticket-item',
   templateUrl: 'ticket-item.page.html',
   styleUrls: ['ticket-item.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,  IonCol, IonGrid, IonRow, IonText, IonDatetime, IonInput, IonCard, IonModal, IonList, IonItem, IonSelect, IonSelectOption, IonDatetimeButton, IonButton, FormsModule, CommonModule]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,  IonCol, IonGrid, IonRow, IonText, IonDatetime, IonInput, IonCard, IonModal, IonList, IonItem, IonSelect, IonSelectOption, IonDatetimeButton, IonButton, FormsModule, CommonModule, RouterLink,]
 })
 export class TicketItemPage {
   // public ticket : Ticket[] =[
@@ -37,7 +38,7 @@ export class TicketItemPage {
   public comprarTicket(){
     //Recoger valores de campos del html
     let nameHtml: string = "aaa";
-    console.log(nameHtml);
+    // console.log();
 
     //Actualizar var de ticket
     this.ticket.nombre = nameHtml;
