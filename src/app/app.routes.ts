@@ -35,6 +35,10 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
+  },  {
+    path: 'pagina-agradecimiento',
+    loadComponent: () => import('./pages/layout/pagina-agradecimiento/pagina-agradecimiento.page').then( m => m.PaginaAgradecimientoPage)
   },
+
 
 ];
